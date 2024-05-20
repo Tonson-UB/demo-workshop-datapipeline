@@ -29,6 +29,7 @@ def exercise2_taskflow_dag():
         bash_command="gsutil ls gs://bucket",
     )
 
+# task dependencies
     t1 >> [t2, t3]
     
 # เรียกใช้ function dag

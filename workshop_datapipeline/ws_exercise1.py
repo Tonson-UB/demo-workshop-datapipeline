@@ -26,8 +26,6 @@ with DAG(
         op_kwargs={"somthing":"Hello World"},
     )
 
-
-
     t2 = BashOpertor(
         task_id="print_date",
         bash_command="echo $(date)",

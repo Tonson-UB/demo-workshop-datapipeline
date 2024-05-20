@@ -24,6 +24,7 @@ with DAG(
 
     t5 =DummyOperator(task_id="task_5")
     t6 =DummyOperator(task_id="task_6")
-
+    
+    # task dependencies
     [t0, t1, t2] >> t4
     [t3, t4, t5] >> t6
