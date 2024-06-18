@@ -1,8 +1,8 @@
 import datetime
 
 from airflow.models import DAG
-from airflow.opertors.python import PythonOperator
-from airflow.operators.bash import BashOpertor
+from airflow.operators.python import PythonOperator
+from airflow.operators.bash import BashOperator
 from airflow.utils.dates import days_ago
 
 default_args = {
@@ -26,7 +26,7 @@ with DAG(
         op_kwargs={"somthing":"Hello World"},
     )
 
-    t2 = BashOpertor(
+    t2 = BashOperator(
         task_id="print_date",
         bash_command="echo $(date)",
     )

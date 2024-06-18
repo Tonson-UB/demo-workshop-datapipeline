@@ -6,9 +6,9 @@ with DAG(
     "exercise_fan_in_dag",
     start_date=days_ago(1),
     schedule_interval=None,
-    tag=["exercise"],
+    tags=["exercise"]
 ) as dag:
-    
+  
     # Exercise3: Fan-in Pipeline
 
     t0 = DummyOperator(task_id="task_0")
